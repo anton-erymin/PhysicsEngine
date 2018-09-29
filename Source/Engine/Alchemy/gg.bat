@@ -1,0 +1,1 @@
+gluegen interface.gg -oc AlchemyInterface.cpp -oas LaxePhysicsEngineDLL.as -cpackage laxe.physics -package laxe.physics -class LaxePhysicsEngineDLL

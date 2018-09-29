@@ -1,0 +1,49 @@
+{
+#include "AlchemyInterface.h"
+}
+
+
+public function lpCreateLaxePhysicsEngine():(int)int;
+
+public function lpEngineSetGravity(engine:(lpLaxePhysicsEngine*)int, x:Number, y:Number, z:Number):void;
+public function lpEngineStep(engine:(lpLaxePhysicsEngine*)int, dt:Number):void;
+public function lpEngineAddBody(engine:(lpLaxePhysicsEngine*)int, body:(lpRigidBody*)int):void;
+public function lpEngineRemoveBody(engine:(lpLaxePhysicsEngine*)int, body:(lpRigidBody*)int):void;
+public function lpEngineCreateWorldSimple(engine:(lpLaxePhysicsEngine*)int, solverType:int):(int)int;
+public function lpEngineCreateWorldQuadtree(engine:(lpLaxePhysicsEngine*)int, solverType:int):(int)int;
+public function lpEngineCreateWorldBVH(engine:(lpLaxePhysicsEngine*)int, solverType:int):(int)int;
+public function lpEngineSetWorld(engine:(lpLaxePhysicsEngine*)int, world:(lpWorld*)int):void;
+public function lpEngineGetWorld(engine:(lpLaxePhysicsEngine*)int):(int)int;
+public function lpEngineCreateRigidBody(engine:(lpLaxePhysicsEngine*)int, addFlag:Boolean):(int)int;
+public function lpEngineCreateStaticBody(engine:(lpLaxePhysicsEngine*)int, addFlag:Boolean):(int)int;
+
+public function lpWorldAddBody(world:(lpWorld*)int, body:(lpRigidBody*)int):void;
+public function lpWorldRemoveBody(world:(lpWorld*)int, body:(lpRigidBody*)int):void;
+public function lpWorldSetGravity(world:(lpWorld*)int, x:Number, y:Number, z:Number):void;
+public function lpWorldStep(world:(lpWorld*)int, dt:Number):void;
+public function lpWorldUpdateBodies(world:(lpWorld*)int):void;
+
+public function lpRigidBodyAddGeometry(body:(lpRigidBody*)int, geometry:(lpCollisionPrimitive*)int):void;
+public function lpRigidBodyUpdate(body:(lpRigidBody*)int):void;
+public function lpRigidBodyRotate(body:(lpRigidBody*)int, angle:Number, xaxis:Number, yaxis:Number, zaxis:Number):void;
+public function lpRigidBodySetSurfaceParams(body:(lpRigidBody*)int, restitution:Number, friction:Number):void;
+public function lpRigidBodySetMass(body:(lpRigidBody*)int, mass:Number):void;
+public function lpRigidBodySetInertiaTensor(body:(lpRigidBody*)int, tensor:(lpMat3*)int):void;
+public function lpRigidBodyApplyForce(body:(lpRigidBody*)int, xforce:Number, yforce:Number, zforce:Number):void;
+public function lpRigidBodyApplyForceAtPoint(body:(lpRigidBody*)int, xforce:Number, yforce:Number, zforce:Number, xpoint:Number, ypoint:Number, zpoint:Number):void;
+public function lpRigidBodyApplyTorque(body:(lpRigidBody*)int, xtorque:Number, ytorque:Number, ztorque:Number):void;
+public function lpRigidBodyMakeImmovable(body:(lpRigidBody*)int):void;
+public function lpRigidBodySetPosition(body:(lpRigidBody*)int, x:Number, y:Number, z:Number):void;
+public function lpRigidBodyGetLinearDamping(body:(lpRigidBody*)int):Number;
+public function lpRigidBodyGetAngularDamping(body:(lpRigidBody*)int):Number;
+public function lpRigidBodySetLinearDamping(body:(lpRigidBody*)int, linDamping:Number):void;
+public function lpRigidBodySetAngularDamping(body:(lpRigidBody*)int, angDamping:Number):void;
+
+public function lpCreateSphere(radius:Number):(int)int;
+public function lpSphereGetVolume(sphere:(lpSphere*)int):Number;
+public function lpCreateBox(width:Number, height:Number, depth:Number):(int)int;
+public function lpBoxGetVolume(box:(lpBox*)int):Number;
+
+public function lpInertiaBoxTensor(mass:Number, width:Number, height:Number, depth:Number):(int)int;
+public function lpInertiaSphereSolidTensor(mass:Number, radius:Number):(int)int;
+public function lpInertiaSphereShellTensor(mass:Number, radius:Number):(int)int;
