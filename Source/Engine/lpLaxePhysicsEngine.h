@@ -18,11 +18,6 @@
 // TODO: grouping contacts
 
 
-lpVec3 LP_X_AXIS(1.0f, 0.0f, 0.0f);
-lpVec3 LP_Y_AXIS(0.0f, 1.0f, 0.0f);
-lpVec3 LP_Z_AXIS(0.0f, 0.0f, 1.0f);
-
-
 
 class DLL_EXPORT lpLaxePhysicsEngine
 {

@@ -34,6 +34,24 @@ lpVec3::lpVec3(float *v)
 }
 
 
+lpVec3::lpVec3(int axis)
+{
+	switch(axis)
+	{
+	case LP_X_AXIS:
+		m_x = 1.0f; m_y = 0.0f; m_z = 0.0f;
+		break;
+	case LP_Y_AXIS:
+		m_x = 0.0f; m_y = 1.0f; m_z = 0.0f;
+		break;
+	case LP_Z_AXIS:
+		m_x = 0.0f; m_y = 0.0f; m_z = 1.0f;
+		break;
+	default:
+		m_x = 0.0f; m_y = 0.0f; m_z = 0.0f;
+	}
+}
+
 
 void lpVec3::clear()
 {

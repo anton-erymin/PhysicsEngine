@@ -5,6 +5,12 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+
+#define		LP_X_AXIS	0
+#define		LP_Y_AXIS	1
+#define		LP_Z_AXIS	2
+
+
 class lpMat3;
 
 // Вектор в трехмерном пространстве
@@ -26,6 +32,7 @@ public:
 	lpVec3(float x, float y, float z);
 	lpVec3(float s);
 	lpVec3(float *v);
+	lpVec3(int axis);
 
 	void		clear();
 	void		setTo(float x, float y, float z);
