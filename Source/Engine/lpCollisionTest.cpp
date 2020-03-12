@@ -86,11 +86,11 @@ void testSphereSphere(lpSphere *s1, lpSphere *s2, std::vector<lpContactJoint*> *
 	numContacts++;
 }
 
-#include "../Opcode/Opcode.h"
+//#include "../Opcode/Opcode.h"
 
 void testBoxSphere(lpBox *b, lpSphere *s, std::vector<lpContactJoint*> *contacts, unsigned int &numContacts)
 {
-	IceMaths::Sphere *icesph = new IceMaths::Sphere(IceMaths::Point(), 10.0f);
+	//IceMaths::Sphere *icesph = new IceMaths::Sphere(IceMaths::Point(), 10.0f);
 	//printf("%f\n", icesph->mRadius);
 
 	lpVec3 center = s->m_body->m_pos;
